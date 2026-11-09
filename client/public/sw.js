@@ -1,5 +1,5 @@
-const CACHE_NAME = "artur-cheats-shell-v6";
-const APP_SHELL = ["/", "/manifest.json", "/artur-cheats-banner.jpeg", "/artur-cheats-icon-180.png", "/artur-cheats-icon-192.png", "/artur-cheats-icon-512.png", "/artur-cheats-icon-maskable-512.png"];
+const CACHE_NAME = "jeyffz-shell-v6";
+const APP_SHELL = ["/", "/manifest.json", "/jeyffz-banner.jpeg", "/jeyffz-icon-180.png", "/jeyffz-icon-192.png", "/jeyffz-icon-512.png", "/jeyffz-icon-maskable-512.png"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));

@@ -1,4 +1,4 @@
-# ARTUR CHEATS
+# JEYFFZ
 
 Painel web responsivo em **azul-marinho**, com login por key, gerador de sensibilidade, histórico e favoritos, área Auxílio, suporte via Discord e painel administrativo.
 
@@ -17,7 +17,7 @@ pnpm build
 
 ## Identidade e acesso administrativo
 
-O painel identifica o administrador como `ARTURADMIN00`. A chave usada para autenticar o administrador é configurada separadamente pela variável privada `RBXIS_ADMIN_KEY`; não a grave neste repositório público. O segredo de sessão também é obrigatório.
+O painel identifica o administrador como `JEYFFZADMIN`. A chave usada para autenticar o administrador é configurada separadamente pela variável privada `RBXIS_ADMIN_KEY`; não a grave neste repositório público. O segredo de sessão também é obrigatório.
 
 ## Deploy na Vercel
 
@@ -60,4 +60,4 @@ A logo principal foi fornecida para este projeto. Os ícones de código da inter
 
 ## PWA
 
-O título, tema e manifesto de instalação estão configurados para ARTUR CHEATS. Para atualizar uma instalação antiga no celular após o deploy, feche e reabra o PWA; se o cache persistir, remova o atalho antigo e adicione-o novamente pelo navegador.
+O título, tema e manifesto de instalação estão configurados para JEYFFZ. Para atualizar uma instalação antiga no celular após o deploy, feche e reabra o PWA; se o cache persistir, remova o atalho antigo e adicione-o novamente pelo navegador.

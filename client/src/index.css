@@ -243,7 +243,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .admin-menu-popover button:hover { color: #fff; background: #2c2c2c; }
 @media (max-width: 760px) { .admin-menu-button { top: 14px; left: 14px; } .admin-menu-popover { top: 64px; left: 14px; } }
 
-/* ARTUR CHEATS: painel preto e magenta inspirado na referência visual. */
+/* JEYFFZ: painel preto e magenta inspirado na referência visual. */
 .aux-page { min-height: 100svh; display: grid; place-items: center; padding: 34px; background: radial-gradient(circle at 70% 15%, #272727 0, transparent 32%), #0b080a; }
 .aux-window { display: flex; width: min(860px, 100%); min-height: 540px; overflow: hidden; border: 1px solid #303030; border-radius: 18px; background: #121212ef; box-shadow: 0 28px 90px #000b, 0 0 70px #85858512; backdrop-filter: blur(18px); }
 .aux-rail { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 74px; padding: 20px 11px; border-right: 1px solid #272727; background: #0e0e0e; }
@@ -262,7 +262,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .quick-exit-active { background: #080507; transition: opacity .18s ease; }.quick-exit-screen { display: grid; place-items: center; align-content: center; gap: 9px; min-height: 100svh; color: #f2eef0; text-align: center; animation: quick-exit-fade .18s ease both; }.quick-exit-screen span { color: #7f7f7f; font-size: 11px; }.quick-exit-mark { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 5px; border: 1px solid #363636; border-radius: 50%; color: #b5b5b5; background: #151515; }.quick-exit-screen b { font-size: 14px; }.aux-module-grid .aux-module { cursor: pointer; }@keyframes quick-exit-fade { from { opacity: 0; transform: scale(.98); } to { opacity: 1; transform: scale(1); } }
 
-/* ARTUR CHEATS: identidade monocromática em gradiente e tela inicial mobile */
+/* JEYFFZ: identidade monocromática em gradiente e tela inicial mobile */
 html, body { background: linear-gradient(135deg, #030303 0%, #1b1b1b 52%, #050505 100%); }
 .login-shell, .app-shell, .admin-shell, .loading-screen, .aux-page { filter: grayscale(1); }
 .login-shell { min-height: 100svh; background: radial-gradient(circle at 82% 4%, #424242 0, transparent 29%), radial-gradient(circle at 12% 92%, #252525 0, transparent 32%), linear-gradient(135deg, #050505 0%, #202020 55%, #070707 100%); }
@@ -425,7 +425,7 @@ html, body { background: linear-gradient(135deg, #030303 0%, #1b1b1b 52%, #05050
 }
 
 
-/* ARTUR CHEATS — identidade preta com acentos magenta e navegação superior responsiva. */
+/* JEYFFZ — identidade preta com acentos magenta e navegação superior responsiva. */
 :root { color-scheme: dark; }
 html, body, #root { min-height: 100%; background: #060506; }
 body { background: #060506; }
@@ -573,7 +573,7 @@ body { background: #060506; }
 }
 
 
-/* ARTUR CHEATS — editorial monocromático, fotografia cinematográfica e navegação em trilho lateral. */
+/* JEYFFZ — editorial monocromático, fotografia cinematográfica e navegação em trilho lateral. */
 :root { color-scheme: dark; }
 html, body, #root { min-height: 100%; background: #080808; }
 body { background: linear-gradient(135deg, #050505 0%, #222 52%, #080808 100%); }
@@ -787,7 +787,7 @@ body { background: linear-gradient(135deg, #050505 0%, #222 52%, #080808 100%); 
   .yx-aux-window > .aux-footer { margin-top: 14px; font-size: 8px; }
 }
 
-/* Ícones das funções em traço, alinhados à identidade ARTUR CHEATS. */
+/* Ícones das funções em traço, alinhados à identidade JEYFFZ. */
 .yx-aux-tabs::before { content: "CS"; background: #27282c; }
 .ffh4x-icon { display: block; flex: 0 0 auto; width: 44px; height: 32px; border-radius: 7px; object-fit: cover; object-position: center; filter: contrast(1.08) drop-shadow(0 3px 5px #0009); }
 .aux-toggle-row.yx-aim-row .ffh4x-icon { width: 54px; height: 32px; }
@@ -798,7 +798,7 @@ body { background: linear-gradient(135deg, #050505 0%, #222 52%, #080808 100%); 
   .yx-module-grid .aux-module .ffh4x-icon { width: 42px; height: 28px; }
 }
 
-/* ARTUR CHEATS — azul-marinho e hierarquia visual assimétrica. */
+/* JEYFFZ — azul-marinho e hierarquia visual assimétrica. */
 :root {
   color-scheme: dark;
   --primary: #2878e8;
@@ -936,14 +936,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 
-/* Logo ARTUR CHEATS e ícones de código usados nos controles do painel. */
-.brand-icon { overflow: hidden; border: 1px solid #22528f; background: #020712; box-shadow: 0 8px 25px #0750a433; }
+/* Logo JEYFFZ e ícones de código usados nos controles do painel. */
+.brand-icon { overflow: hidden; border: 1px solid #22528f; background: #080808; box-shadow: 0 8px 25px #ffffff22; }
 .brand-icon img { display: block; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
-.login-photo.clean-brand-hero { display: grid; place-items: center; background: radial-gradient(circle at 50% 44%, #12396a 0, #0a1930 39%, #06101d 74%); }
+.login-photo.clean-brand-hero { display: grid; place-items: center; background: radial-gradient(circle at 50% 44%, #444444 0, #111111 39%, #050505 74%); }
 .login-photo.clean-brand-hero::after { z-index: 0; background: linear-gradient(180deg, #02081410, #02081433 63%, #020814e0); }
 .login-photo.clean-brand-hero .clean-brand-hero-logo { position: absolute; z-index: 1; top: 43%; left: 50%; display: block; width: min(55%, 320px); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: contain; filter: none; opacity: .98; transform: translate(-50%, -50%); box-shadow: 0 12px 55px #00102d88; }
 .login-photo.clean-brand-hero figcaption { z-index: 2; color: #d9eaff; }
-.about-eye-banner { display: grid; place-items: center; overflow: hidden; border-color: #28517b; background: radial-gradient(circle at 50% 50%, #16385f, #09182a 70%); }
+.about-eye-banner { display: grid; place-items: center; overflow: hidden; border-color: #444444; background: radial-gradient(circle at 50% 50%, #16385f, #09182a 70%); }
 .about-eye-banner .about-brand-logo { position: relative; z-index: 1; display: block; width: min(68%, 300px); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: contain; filter: none; box-shadow: 0 16px 50px #0009; }
 .yx-aux-window { background-image: radial-gradient(circle at 90% 0, #14395d50, transparent 38%), linear-gradient(145deg, #0c1d32, #07111e 75%) !important; }
 .yx-aux-window > .yx-aux-heading { min-height: 82px; }
@@ -955,7 +955,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 
 /* O monograma da navegação Auxílio também usa a logo fornecida. */
-.yx-aux-tabs::before { content: ""; border-color: #28517b; background-color: #020712; background-image: url("/artur-cheats-icon-192.png"); background-position: center; background-repeat: no-repeat; background-size: cover; box-shadow: 0 8px 22px #0750a433; }
+.yx-aux-tabs::before { content: ""; border-color: #444444; background-color: #080808; background-image: url("/jeyffz-icon-192.png"); background-position: center; background-repeat: no-repeat; background-size: cover; box-shadow: 0 8px 22px #ffffff22; }
 @media (max-width: 760px) { .yx-aux-tabs::before { background-size: cover; } }
 
 
@@ -1088,12 +1088,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 /* Saída rápida acionada pelo módulo Bypass. */
 .yx-bypass-overlay { position: fixed; z-index: 9999; inset: 0; display: grid; place-content: center; justify-items: center; gap: 9px; padding: 24px; color: #edf7ff; background: #06101e; text-align: center; animation: quick-exit-fade .18s ease both; }
-.yx-bypass-mark { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 5px; border: 1px solid #28517b; border-radius: 50%; color: #9dccff; background: #10233a; }
+.yx-bypass-mark { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 5px; border: 1px solid #444444; border-radius: 50%; color: #9dccff; background: #10233a; }
 .yx-bypass-overlay b { font-size: 14px; }
 .yx-bypass-overlay span { color: #91a5bf; font-size: 11px; }
 
 
-/* Login ARTUR CHEATS tipográfico, sem logo em imagem. */
+/* Login JEYFFZ tipográfico, sem logo em imagem. */
 .login-brand-wordmark { color: #f4f8ff; font-size: 14px; font-weight: 900; letter-spacing: .16em; }
 .login-copy { justify-content: center; background: radial-gradient(ellipse at 18% 20%, #12365a88, transparent 48%), linear-gradient(145deg, #07111f, #0a1a2c 70%, #08111c); }
 .login-copy h1 { max-width: 100%; font-size: clamp(72px, 9vw, 128px); line-height: .9; letter-spacing: -.075em; }

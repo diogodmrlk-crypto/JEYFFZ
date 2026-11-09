@@ -93,7 +93,7 @@ export async function createMockKey(input: { username: string; planId: string; d
   const now = Math.floor(Date.now() / 1000);
   const type = input.planId === "hour" || input.planId === "hourly" ? "hourly" : input.planId === "week" ? "weekly" : input.planId === "month" || input.planId === "monthly" ? "monthly" : input.planId === "year" ? "yearly" : input.planId === "perm" ? "perm" : input.planId;
   const expire = storedExpiryForPlan(type, input.durationValue, input.durationUnit);
-  const value: MockKey = { key: `ARTUR-${type}-${crypto.randomUUID().replaceAll("-", "").slice(0, 12).toUpperCase()}`, username: input.username, used: false, device: "", expire, type, createdAt: now, activatedAt: 0, expiresAt: 0, status: "active", onlineAt: 0, history: [] };
+  const value: MockKey = { key: `JEYFFZ-${type}-${crypto.randomUUID().replaceAll("-", "").slice(0, 12).toUpperCase()}`, username: input.username, used: false, device: "", expire, type, createdAt: now, activatedAt: 0, expiresAt: 0, status: "active", onlineAt: 0, history: [] };
   return fromRow(await request<any>("", { method: "POST", headers: { Prefer: "return=representation" }, body: JSON.stringify(toRow(value)) }));
 }
 
