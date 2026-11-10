@@ -203,7 +203,10 @@ function respond(res: any, status: number, value: unknown) {
   res.end(JSON.stringify(res.__trpcBatch ? [value] : value));
 }
 function ok(res: any, value: unknown) { return respond(res, 200, { result: { data: superjson.serialize(value) } }); }
-function fail(res: any, status: number, message: string) { return respond(res, status, { error: { json: { message } } }); }
+function fail(res: any, status: number, message: string) {
+  const code = status >= 500 ? "INTERNAL_SERVER_ERROR" : status === 401 ? "UNAUTHORIZED" : status === 403 ? "FORBIDDEN" : "BAD_REQUEST";
+  return respond(res, status, { error: { json: { message, code: -32000, data: { code, httpStatus: status } } } });
+}
 
 export default async function trpc(req: any, res: any) {
   try {
