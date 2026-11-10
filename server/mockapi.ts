@@ -17,7 +17,7 @@ export type MockKey = {
 };
 
 /** Coleção pública da MockAPI; sem credenciais adicionais. */
-export const MOCKAPI_KEYS_URL = process.env.MOCKAPI_KEYS_URL?.trim() || "https://6ade7e8b4e88f1bba4a527ee.mockapi.io/Arturapi";
+export const MOCKAPI_KEYS_URL = process.env.MOCKAPI_KEYS_URL?.trim() || "https://6af27ecd42c6561ced394eea.mockapi.io/apikey";
 
 async function request<T>(path = "?sortBy=createdAt&order=desc", init?: RequestInit): Promise<T> {
   const response = await fetch(`${MOCKAPI_KEYS_URL}${path}`, {

@@ -23,15 +23,15 @@ O painel identifica o administrador como `JEYFFZADMIN`. A chave usada para auten
 
 Importe este repositório na Vercel e configure estas variáveis de ambiente em todos os ambientes necessários:
 
-- `RBXIS_ADMIN_KEY`: chave privada e exclusiva para o login administrativo. Configure uma chave privada própria diretamente nas variáveis da Vercel.
+- `RBXIS_ADMIN_KEY`: chave privada e exclusiva para o login administrativo. Configure `RBXIS_ADMIN_KEY` diretamente nas variáveis da Vercel. Para este projeto, use o valor `JEYDMIN00` nessa variável; ele não é gravado no repositório público.
 - `RBXIS_SESSION_SECRET`: segredo aleatório longo. Gere um valor novo com `openssl rand -hex 32`.
-- `MOCKAPI_KEYS_URL`: `https://6ade7e8b4e88f1bba4a527ee.mockapi.io/Arturapi`.
+- `MOCKAPI_KEYS_URL`: `https://6af27ecd42c6561ced394eea.mockapi.io/apikey`.
 
 Não inclua valores de segredo em commits, issues públicas ou arquivos de ambiente publicados.
 
 ## MockAPI
 
-A coleção de licenças usa `https://6ade7e8b4e88f1bba4a527ee.mockapi.io/Arturapi`. Se a coleção exigir schema fixo, disponibilize estes campos:
+A coleção de licenças usa `https://6af27ecd42c6561ced394eea.mockapi.io/apikey`. Se a coleção exigir schema fixo, disponibilize estes campos:
 
 | Campo | Tipo | Uso |
 |---|---|---|

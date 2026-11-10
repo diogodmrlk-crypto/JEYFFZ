@@ -8,7 +8,7 @@ type MockKey = {
   history?: Array<Record<string, any>>; onlineAt?: number;
 };
 
-const MOCKAPI_KEYS_URL = process.env.MOCKAPI_KEYS_URL?.trim() || "https://6ade7e8b4e88f1bba4a527ee.mockapi.io/Arturapi";
+const MOCKAPI_KEYS_URL = process.env.MOCKAPI_KEYS_URL?.trim() || "https://6af27ecd42c6561ced394eea.mockapi.io/apikey";
 const ADMIN_KEY = process.env.RBXIS_ADMIN_KEY?.trim() || "";
 const DURATION_UNITS = ["hours", "days", "weeks", "months", "years"] as const;
 const VALID_PLAN_IDS = new Set<string>(["hourly", "daily", "weekly", "monthly", "perm"]);
