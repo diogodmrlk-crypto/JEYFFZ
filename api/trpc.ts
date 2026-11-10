@@ -9,7 +9,6 @@ type MockKey = {
 };
 
 const MOCKAPI_KEYS_URL = process.env.MOCKAPI_KEYS_URL?.trim() || "https://6af27ecd42c6561ced394eea.mockapi.io/apikey";
-const ADMIN_KEY = process.env.RBXIS_ADMIN_KEY?.trim() || "";
 const DURATION_UNITS = ["hours", "days", "weeks", "months", "years"] as const;
 const VALID_PLAN_IDS = new Set<string>(["hourly", "daily", "weekly", "monthly", "perm"]);
 const VALID_DURATION_UNITS = new Set<string>(DURATION_UNITS);
@@ -17,6 +16,7 @@ const SESSION_COOKIE = "rbxis_session_v3";
 const secret = () => process.env.RBXIS_SESSION_SECRET || "";
 const encode = (value: string) => Buffer.from(value).toString("base64url");
 const sign = (payload: string) => createHmac("sha256", secret()).update(payload).digest("base64url");
+const getAdminKey = () => String(process.env.RBXIS_ADMIN_KEY ?? "").trim().replace(/^["\'“”‘’]+|["\'“”‘’]+$/g, "");
 
 function durationInDays(value: number, unit: (typeof DURATION_UNITS)[number]) {
   if (unit === "hours") return value / 24;
@@ -216,8 +216,10 @@ export default async function trpc(req: any, res: any) {
 
     if (path === "auth.adminLogin") {
       if (!secret()) return fail(res, 503, "RBXIS_SESSION_SECRET não configurado");
-      if (!ADMIN_KEY) return fail(res, 503, "RBXIS_ADMIN_KEY não configurado");
-      if (String(data.adminKey ?? "").trim() !== ADMIN_KEY) {
+      const configuredAdminKey = getAdminKey();
+      if (!configuredAdminKey) return fail(res, 503, "RBXIS_ADMIN_KEY não configurado");
+      const submittedAdminKey = String(data.adminKey ?? "").trim().replace(/^["\'“”‘’]+|["\'“”‘’]+$/g, "");
+      if (submittedAdminKey !== configuredAdminKey) {
         await notifyInvalidAdminLogin(req);
         return fail(res, 401, "Chave administrativa inválida");
       }

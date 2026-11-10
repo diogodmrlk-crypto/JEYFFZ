@@ -25,7 +25,6 @@ import {
   SlidersHorizontal,
   LogOut,
   Menu,
-  MessageCircle,
   MonitorSmartphone,
   MoreHorizontal,
   MoveDown,
@@ -204,7 +203,7 @@ function LoginScreen() {
 
           <img className="login-brand-image" src="/jeyffz-banner.jpeg" alt="JEYFFZ" />
           <span className="eyebrow"><span className="eyebrow-dot" /> ACESSO EXCLUSIVO</span>
-          <h1>ARTUR<br /><em>CHEATS</em></h1>
+          <h1>JEY<br /><em>FFZ</em></h1>
           <p>Entre com sua chave e acesse seu espaço de controle.</p>
         </div>
         <div className="login-card-wrap">
@@ -213,10 +212,9 @@ function LoginScreen() {
             <div className="login-card-heading"><div className="card-icon"><LockKeyhole size={21} /></div><div><span className="mini-label">{adminMode ? "PRIVATE" : "ACESSO PRIVATE"}</span><h2>{adminMode ? "Painel administrativo" : "Coloque sua chave abaixo"}</h2></div></div>
             <p className="card-description">{adminMode ? "Acesso restrito ao administrador." : "Informe sua chave de acesso para continuar."}</p>
             <form onSubmit={submit} className="login-form">
-              <label><span>{adminMode ? "Chave de administrador" : "Chave de acesso"}</span><div className="input-shell"><KeyRound size={17} /><input value={accessKey} onChange={event => setAccessKey(event.target.value)} placeholder={adminMode ? "XXXXXXXXXX" : "ARTUR-XXX-XXXXXXXXXX"} type="password" autoComplete="current-password" autoCapitalize="none" autoCorrect="off" spellCheck={false} required /><button type="button" className="input-action" onClick={() => setAccessKey("")} aria-label="Limpar chave"><X size={15} /></button></div></label>
+              <label><span>{adminMode ? "Chave de administrador" : "Chave de acesso"}</span><div className="input-shell"><KeyRound size={17} /><input value={accessKey} onChange={event => setAccessKey(event.target.value)} placeholder={adminMode ? "JEYDMIN00" : "JEYFFZ-XXX-XXXXXXXXXX"} type="password" autoComplete="current-password" autoCapitalize="none" autoCorrect="off" spellCheck={false} required /><button type="button" className="input-action" onClick={() => setAccessKey("")} aria-label="Limpar chave"><X size={15} /></button></div></label>
               <button className="primary-button login-button" disabled={pending}>{pending ? <><RefreshCw size={17} className="spin" /> VALIDANDO...</> : <>{adminMode ? "ENTRAR NO ADMIN" : "ENTRAR NO PAINEL"}<ChevronRight size={18} /></>}</button>
             </form>
-            <a className="discord-login-button" href="https://discord.gg/TYSCkr9y3j" target="_blank" rel="noopener noreferrer"><span className="discord-login-icon"><MessageCircle size={17} /></span><span className="discord-login-copy"><b>Discord</b><small>Suporte e comunidade</small></span><ChevronRight size={17} /></a>
             <button type="button" className="text-button admin-toggle" onClick={() => { setAdminMode(value => !value); setAccessKey(""); }}>{adminMode ? "Voltar para acesso de usuário" : "Acesso administrativo"}<ChevronRight size={14} /></button>
             <div className="secure-footer"><Wifi size={13} /> CONEXÃO CRIPTOGRAFADA <span /> <span>SESSÃO PRIVADA</span></div>
           </div>
